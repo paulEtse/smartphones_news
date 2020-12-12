@@ -11,7 +11,7 @@ dfa$extensible <- as.numeric(dfa$ extensible)
 df <- ddply(dfa, "Année",  summarise, memoire = mean(`capacité (GB)`), ram = mean(`RAM (GB)`), extensible = mean(extensible))
 df <- na.omit(df)
 ggplot(df)+
-  geom_col(aes(x=Année, y=memoire), fill= 'blue')+
-  geom_col(aes(x=Année, y= ram), fill='red')+
-  geom_line(mapping = aes(x=Année, y=extensible))
-  
+  geom_col(aes(x=Année, y=memoire, fill= 'blue'))+
+  geom_col(aes(x=Année, y= ram, fill='red'))+
+  scale_fill_manual("", values = c('blue', 'red'), labels=c("storage","ram"))+
+  theme(legend.position=c(0.5,0.7))

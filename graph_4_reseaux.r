@@ -23,6 +23,6 @@ g <- g + labs(y= "Courverture")
 g <- g + scale_color_manual("", 
                       values = c( "green", "yellow","black", "red"),
                       labels = c("5G", "3G", "2G", "4G"))+
-labs(title="Couverture réseau")
+  theme(legend.position=c(0.7,0.3))
 g 
 
