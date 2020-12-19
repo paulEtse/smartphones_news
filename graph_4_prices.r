@@ -2,6 +2,9 @@ library(readr)
 library(plyr)
 library(tidyverse)
 library(ggplot2)
+theme_set(
+  theme_classic() 
+)
 
 PATH = paste(dirname(rstudioapi::getSourceEditorContext()$path), 
              "/dataset/smartphones.csv", sep = "")
@@ -22,4 +25,7 @@ df$inflation <- INFLATION
 df$taux <- taux
 df$real_price <- df$price*(100+df$taux)/100
 ggplot(df)+
-  geom_col(aes(x=Année, y=real_price), fill= 'blue')
+  geom_col(aes(x=Année, y=real_price), fill= '#66d9ff')+
+  ylab("Price")
+
+
