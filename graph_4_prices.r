@@ -26,6 +26,6 @@ df$taux <- taux
 df$real_price <- df$price*(100+df$taux)/100
 ggplot(df)+
   geom_col(aes(x=Année, y=real_price), fill= '#66d9ff')+
-  ylab("Price")
+  ylab("Prix (€)")
 
 
