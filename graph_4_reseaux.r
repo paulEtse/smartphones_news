@@ -30,3 +30,4 @@ g <- g + scale_color_manual("",
   theme(legend.position=c(0.7,0.3))
 g 
 
+
