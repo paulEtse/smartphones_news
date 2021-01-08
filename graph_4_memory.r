@@ -25,10 +25,11 @@ g <- ggplot(df1, aes(x=Année, y=value, fill=factor(variable, levels = c('extens
 g <- g + geom_bar(stat="identity", position = "stack")
 g <- g + scale_fill_manual("Storage", 
                               values = c("gray", "#0088cc"),
-                              labels = c("extensibillty", "memoire"))
+                              labels = c("extensibilité", "memoire"))
 g <- g + theme(legend.position=c(0.5,0.7))
-g <- g + ylab("Capacity (GB)")
+g <- g + ylab("Capacité (GB)")
 g
+
 
 
 
